@@ -10,6 +10,16 @@ import java.util.ArrayList;
 
 public class WriteFile {
 
+    public static String createFile(String nameFile){
+        Path file = Path.of(Constants.BASE_IN_PATH + nameFile + ".txt");
+        try {
+            Files.createFile(file);
+            return "Файл створено ";
+        } catch (IOException e) {
+            return"Такий файл існує. " + e.getMessage();
+        }
+    }
+
     public static String writeFile(String nameFile, ArrayList<DataN> list){
         Path file = Path.of(Constants.BASE_IN_PATH + nameFile + ".doc");
         try {
