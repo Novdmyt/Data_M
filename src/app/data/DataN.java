@@ -9,8 +9,8 @@ public class DataN {
         this.name = name;
         this.price = price;
     }
-
+    @Override
     public String toString() {
-        return name + ", phone: " + price;
+        return " Назва продукту " + name + ", ціна " + price;
     }
 }
